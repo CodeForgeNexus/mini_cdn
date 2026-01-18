@@ -24,7 +24,7 @@ st.set_page_config(
 DEFAULT_SERVERS = [
     "https://www.google.com",
     "https://www.github.com",
-    "127.0.0.1:8001"
+    "https://www.wikipedia.org"
 ]
 
 if "SERVERS" not in st.session_state:
