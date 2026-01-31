@@ -381,34 +381,6 @@ def get_ultimate_css(theme):
 st.markdown(get_ultimate_css(st.session_state.theme), unsafe_allow_html=True)
 
 
-# =================== TOP HEADER WITH LOGO ===================
-
-st.markdown("""
-<style>
-/* Header container - centered */
-.nexus-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -10px;
-    margin-bottom: 28px;
-    width: 100%;
-}
-
-/* Logo sizing */
-.nexus-header img {
-    height: 80px;
-    width: auto;
-    display: block;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<div class="nexus-header">
-    <img src="nexus_logo.png" alt="Nexus Logo">
-</div>
-""", unsafe_allow_html=True)
 
 
 
