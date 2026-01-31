@@ -384,31 +384,32 @@ st.markdown(get_ultimate_css(st.session_state.theme), unsafe_allow_html=True)
 # =================== TOP HEADER WITH LOGO ===================
 
 
+
 st.markdown("""
 <style>
-/* Header container */
+/* Header container - centered */
 .nexus-header {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 14px;
     margin-top: -10px;
     margin-bottom: 28px;
+    width: 100%;
 }
 
-/* Logo sizing — NORMAL, PROFESSIONAL */
+/* Logo sizing */
 .nexus-header img {
-    height: 500px;
-    width: 700x;
-}
-
-/* Title text next to logo */
-.nexus-header .title {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    letter-spacing: -0.01em;
+    height: 80px;
+    width: auto;
+    display: block;
 }
 </style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="nexus-header">
+    <img src="https://your-logo-url-here.png" alt="Nexus Logo">
+</div>
 """, unsafe_allow_html=True)
 
 
