@@ -380,20 +380,6 @@ def get_ultimate_css(theme):
 
 st.markdown(get_ultimate_css(st.session_state.theme), unsafe_allow_html=True)
 
-st.markdown("""
-<style>
-.nexus-logo {
-    position: fixed;
-    top: 18px;
-    left: 310px; /* right of sidebar */
-    z-index: 1001;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown('<div class="nexus-logo">', unsafe_allow_html=True)
-st.image("nexus_logo.png", width=52)
-st.markdown('</div>', unsafe_allow_html=True)
 
 st.markdown("""
 <style>
@@ -401,7 +387,7 @@ st.markdown("""
     --sidebar-width: 300px;
 }
 
-/* Logo container next to sidebar */
+/* Logo positioned right of sidebar */
 .nexus-logo {
     position: fixed;
     top: 18px;
@@ -411,12 +397,19 @@ st.markdown("""
     align-items: center;
 }
 
-/* Logo image */
+/* Logo size */
 .nexus-logo img {
     height: 48px;
     width: auto;
 }
 </style>
+""", unsafe_allow_html=True)
+
+st.markdown('<div class="nexus-logo">', unsafe_allow_html=True)
+st.image("nexus_logo.png")
+st.markdown('</div>', unsafe_allow_html=True)
+
+
 
 
 
