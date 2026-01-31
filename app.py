@@ -381,25 +381,26 @@ def get_ultimate_css(theme):
 st.markdown(get_ultimate_css(st.session_state.theme), unsafe_allow_html=True)
 
 
+# =================== LOGO — FINAL POSITION FIX ===================
+
 st.markdown("""
 <style>
+/* Sidebar width reference */
 :root {
     --sidebar-width: 300px;
 }
 
-/* Logo positioned right of sidebar */
+/* Logo container */
 .nexus-logo {
     position: fixed;
-    top: 18px;
-    left: calc(var(--sidebar-width) + 20px);
+    top: 86px; /* aligns with main content top */
+    left: calc(var(--sidebar-width) + 32px);
     z-index: 1001;
-    display: flex;
-    align-items: center;
 }
 
-/* Logo size */
+/* Logo image */
 .nexus-logo img {
-    height: 48px;
+    height: 56px;   /* prominent but professional */
     width: auto;
 }
 </style>
