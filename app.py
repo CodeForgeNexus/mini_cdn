@@ -383,6 +383,7 @@ st.markdown(get_ultimate_css(st.session_state.theme), unsafe_allow_html=True)
 
 # =================== TOP HEADER WITH LOGO ===================
 
+
 st.markdown("""
 <style>
 /* Header container */
@@ -396,7 +397,7 @@ st.markdown("""
 
 /* Logo sizing — NORMAL, PROFESSIONAL */
 .nexus-header img {
-    height: 500px;   /* <-- correct logo size */
+    height: 500px;
     width: 700x;
 }
 
@@ -408,7 +409,7 @@ st.markdown("""
     letter-spacing: -0.01em;
 }
 </style>
-
+""", unsafe_allow_html=True)
 
 
 
