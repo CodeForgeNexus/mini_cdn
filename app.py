@@ -410,7 +410,7 @@ st.markdown("""
 </style>
 
 <div class="nexus-logo">
-    <img src="assets/nexus_logo.png" alt="Nexus Logo">
+    <img src="nexus_logo.png" alt="Nexus Logo">
 </div>
 """, unsafe_allow_html=True)
 
