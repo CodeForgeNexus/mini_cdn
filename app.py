@@ -382,6 +382,35 @@ st.markdown(get_ultimate_css(st.session_state.theme), unsafe_allow_html=True)
 
 
 # =================== TOP HEADER WITH LOGO ===================
+with st.sidebar:
+
+    # -------- LOGO HEADER --------
+    st.markdown(
+        """
+        <div style="
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 1.2rem 0.8rem 1.4rem 0.8rem;
+        ">
+            <img src="nexus_logo.png" style="
+                height: 36px;
+                width: auto;
+            ">
+            <span style="
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: #e5e7eb;
+                letter-spacing: 0.3px;
+            ">
+                Nexus
+            </span>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown("---")
 
 st.markdown("""
 <style>
@@ -421,35 +450,6 @@ st.markdown("""
 
 
 # ======================= SIDEBAR - STORE VALUES IN SESSION STATE =======================
-with st.sidebar:
-
-    # -------- LOGO HEADER --------
-    st.markdown(
-        """
-        <div style="
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 1.2rem 0.8rem 1.4rem 0.8rem;
-        ">
-            <img src="nexus_logo.png" style="
-                height: 36px;
-                width: auto;
-            ">
-            <span style="
-                font-size: 1.25rem;
-                font-weight: 700;
-                color: #e5e7eb;
-                letter-spacing: 0.3px;
-            ">
-                Nexus
-            </span>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    st.markdown("---")
 
     # -------- CONTROL PANEL HEADER --------
     st.markdown("""
@@ -594,9 +594,7 @@ st.markdown("""
 <h1 style='text-align:center; margin-bottom:0.25rem;'>
     ⚡ Nexus
 </h1>
-<p style='text-align:center; color: var(--text-secondary); font-size: 1rem; margin-bottom: 2.5rem;'>
-    Intelligent server monitoring & selection powered by adaptive algorithms
-</p>
+
 """, unsafe_allow_html=True)
 
 
