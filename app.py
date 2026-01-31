@@ -396,8 +396,8 @@ st.markdown("""
 
 /* Logo sizing — NORMAL, PROFESSIONAL */
 .nexus-header img {
-    height: 100px;   /* <-- correct logo size */
-    width: 200px;
+    height: 500px;   /* <-- correct logo size */
+    width: 700x;
 }
 
 /* Title text next to logo */
