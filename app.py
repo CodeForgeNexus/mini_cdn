@@ -409,13 +409,6 @@ st.markdown("""
 }
 </style>
 
-<div class="nexus-header">
-    <img src="nexus_logo.png" alt="Nexus Logo">
-    <div class="title">Nexus</div>
-</div>
-""", unsafe_allow_html=True)
-
-
 
 
 
