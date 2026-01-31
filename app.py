@@ -61,8 +61,9 @@ def get_ultimate_css(theme):
         return """
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-        * { font-family: 'Poppins', sans-serif !important; }
+        body, .stApp {
+    font-family: 'Poppins', sans-serif;
+}
 
         .stApp {
             background: linear-gradient(-45deg, #0a0e27, #1a1f3a, #2d1b4e, #1e2a4a);
@@ -159,7 +160,6 @@ def get_ultimate_css(theme):
     else:
         return """
         <style>
-        * { font-family: 'Poppins', sans-serif !important; }
 
         .stApp {
             background: linear-gradient(135deg, #f8fafc, #e0e7ff, #fce7f3);
