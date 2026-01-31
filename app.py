@@ -422,17 +422,45 @@ st.markdown("""
 
 # ======================= SIDEBAR - STORE VALUES IN SESSION STATE =======================
 with st.sidebar:
+
+    # -------- LOGO HEADER --------
+    st.markdown(
+        """
+        <div style="
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 1.2rem 0.8rem 1.4rem 0.8rem;
+        ">
+            <img src="nexus_logo.png" style="
+                height: 36px;
+                width: auto;
+            ">
+            <span style="
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: #e5e7eb;
+                letter-spacing: 0.3px;
+            ">
+                Nexus
+            </span>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown("---")
+
+    # -------- CONTROL PANEL HEADER --------
     st.markdown("""
-    <div style="text-align:center; padding:1.5rem 1rem;">
-        <div style="font-size:2.5rem; margin-bottom:0.75rem;">⚙️</div>
-        <h2 style="margin-bottom:0.5rem;">Control Panel</h2>
+    <div style="text-align:center; padding:1.2rem 1rem;">
+        <div style="font-size:2.2rem; margin-bottom:0.6rem;">⚙️</div>
+        <h2 style="margin-bottom:0.4rem;">Control Panel</h2>
         <p style="font-size:0.8125rem; opacity:0.7; color: var(--text-secondary);">
             Configure monitoring & servers
         </p>
     </div>
     """, unsafe_allow_html=True)
-
-    st.markdown("---")
 
     
     st.markdown("### 🌐 Server List")
