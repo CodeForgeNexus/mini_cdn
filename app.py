@@ -383,8 +383,6 @@ st.markdown(get_ultimate_css(st.session_state.theme), unsafe_allow_html=True)
 
 # =================== TOP HEADER WITH LOGO ===================
 
-
-
 st.markdown("""
 <style>
 /* Header container - centered */
@@ -408,7 +406,7 @@ st.markdown("""
 
 st.markdown("""
 <div class="nexus-header">
-    <img src="https://your-logo-url-here.png" alt="Nexus Logo">
+    <img src="nexus_logo.png" alt="Nexus Logo">
 </div>
 """, unsafe_allow_html=True)
 
