@@ -46,6 +46,10 @@ st.markdown("""
         left: 1rem;
     }
 }
+.stApp {
+    overflow: auto;
+}
+
 </style>
 """, unsafe_allow_html=True)
 st.markdown(f"""
