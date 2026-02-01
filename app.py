@@ -30,6 +30,7 @@ st.markdown("""
     top: 1rem;
     left: 22rem; /* actual Streamlit sidebar width in wide mode */
     z-index: 1001;
+    pointer-events:none;
 }
 
 /* Logo image */
