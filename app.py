@@ -8,17 +8,54 @@ import time
 from collections import deque
 from datetime import datetime
 import random
+import base64
 
 # ======================= PROBE =======================
 from probe import probe_server
 
 # ======================= PAGE CONFIG =======================
 st.set_page_config(
-    page_title="Nexus Load Balancer Pro",
+    page_title="Nexus",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+LOGO_BASE64 = base64.b64encode(open("nexus_logo.png", "rb").read()).decode()
+
+st.markdown("""
+<style>
+/* === FIXED HEADER LOGO (RIGHT OF SIDEBAR) === */
+.nexus-logo {
+    position: fixed;
+    top: 1rem;
+    left: 22rem; /* actual Streamlit sidebar width in wide mode */
+    z-index: 1001;
+}
+
+/* Logo image */
+.nexus-logo img {
+    width: 110px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(139,92,246,0.55));
+}
+
+/* Mobile / sidebar collapsed fallback */
+@media (max-width: 900px) {
+    .nexus-logo {
+        left: 1rem;
+    }
+}
+</style>
+""", unsafe_allow_html=True)
+st.markdown(f"""
+<div class="nexus-logo">
+    <img src="data:image/png;base64,{LOGO_BASE64}" alt="Nexus Logo">
+</div>
+""", unsafe_allow_html=True)
+
+
+
+
 
 # ======================= DEFAULT SERVERS =======================
 DEFAULT_SERVERS = [
@@ -379,7 +416,9 @@ def get_ultimate_css(theme):
         animation: glow 3s ease-in-out infinite;
     }
     </style>
+    
     """
+    
 
 st.markdown(get_ultimate_css(st.session_state.theme), unsafe_allow_html=True)
 
@@ -526,13 +565,14 @@ if "prev_best" not in st.session_state:
 
 # ======================= HEADER =======================
 st.markdown("""
-<h1 style='text-align:center; margin-bottom:0.25rem;'>
-    ⚡ Nexus Load Balancer Pro
-</h1>
-<p style='text-align:center; color: var(--text-secondary); font-size: 1rem; margin-bottom: 2.5rem;'>
+<h1 style='text-align:center; margin-bottom:0.25rem;'>⚡ Nexus</h1>
+<p style='text-align:center; color: var(--text-secondary); margin-bottom: 1rem;'>
     Intelligent server monitoring & selection powered by adaptive algorithms
 </p>
 """, unsafe_allow_html=True)
+
+
+
 
 # ======================= MAIN CONTROLS =======================
 btn_col1, btn_col2, btn_col3 = st.columns([2, 2, 6])
@@ -541,7 +581,7 @@ with btn_col1:
     start_btn = st.button("▶️ START MONITORING", use_container_width=True)
 
 with btn_col2:
-    stop_btn = st.button("⏸️ STOP", use_container_width=True)
+    stop_btn = st.button("⏸️ STOP MONITORING", use_container_width=True)
 
 st.markdown("<div style='height:30px'></div>", unsafe_allow_html=True)
 
